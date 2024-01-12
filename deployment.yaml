@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mario-deployment
+  name: youtube-deployment
 spec:
   replicas: 2  # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: mario
+      app: youtube
   template:
     metadata:
       labels:
-        app: mario
+        app: youtube
     spec:
       containers:
-      - name: mario-container
-        image: sevenajay/mario:latest 
+      - name: youtube-container
+        image: anrs125/youtube:latest 
         ports:
         - containerPort: 80
